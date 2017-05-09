@@ -329,7 +329,6 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.oomph"
-      filter=""
       location="${git.workspace.location/}${git.clone.oomph.remoteURI|gitRepository}"
       remoteURI="https://github.com/auriusbendikas/eclipse-installer.git">
     <description>${scope.project.label}</description>
@@ -345,14 +344,8 @@
     </sourceLocator>
   </setupTask>
   <stream name="master"
-      label="Master">
-    <setupTask
-        xsi:type="setup:EclipseIniTask"
-        option="-Doomph.redirection.${scope.project.name.qualified}"
-        value="=https://raw.githubusercontent.com/auriusbendikas/${git.clone.oomph.remoteURI|gitRepository/}${scope.project.stream.name/}${scope.project.name}.setup->${git.clone.oomph.location|uri/}${scope.project.name}.setup"
-        vm="true">
-      <description>Set an redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
-    </setupTask>
+      label="master">
+    <description>Set an redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
   </stream>
   <logicalProjectContainer
       xsi:type="setup:Project"
