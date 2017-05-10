@@ -49,10 +49,6 @@
           name="org.eclipse.tm.terminal.feature.feature.group"/>
       <requirement
           name="org.eclipse.wst.xml_ui.feature.feature.group"/>
-      <repository
-          url="http://ftp.acc.umu.se/mirror/eclipse.org/releases/neon"/>
-      <repository
-          url="http://download.eclipse.org/oomph/updates/milestone/latest"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -128,28 +124,68 @@
     </setupTask>
     <setupTask
         xsi:type="setup:ResourceCreationTask"
-        content="eclipse.preferences.version=1&#xA;org.eclipse.core.net.hasMigrated=true&#xA;proxiesEnabled=true&#xA;systemProxiesEnabled=true"
-        targetURL="configuration:/.settings/org.eclipse.core.net.prefs"
-        encoding="UTF-8"/>
-    <setupTask
-        xsi:type="setup:ResourceCreationTask"
-        content="eclipse.preferences.version=1&#xA;anonymizeMessages=false&#xA;anonymizeStackTraces=true&#xA;sendMode=NEVER&#xA;debugEnabled=false&#xA;reporterEmail=&#xA;reporterName=&#xA;"
-        targetURL="configuration:/.settings/org.eclipse.epp.logging.aeri.ide.prefs"
-        encoding="UTF-8"/>
-    <setupTask
-        xsi:type="setup:ResourceCreationTask"
-        content="eclipse.preferences.version=1&#xA;org.eclipse.equinox.security.preferences.disabledProviders=org.eclipse.equinox.security.ui.defaultpasswordprovider&#xA;"
-        targetURL="configuration:/.settings/org.eclipse.equinox.security.prefs"
-        encoding="UTF-8"/>
-    <setupTask
-        xsi:type="setup:ResourceCreationTask"
         content="eclipse.preferences.version=1&#xA;MAX_RECENT_WORKSPACES=10&#xA;RECENT_WORKSPACES=${workspace.location}&#xA;RECENT_WORKSPACES_PROTOCOL=3&#xA;SHOW_RECENT_WORKSPACES=false&#xA;SHOW_WORKSPACE_SELECTION_DIALOG=false&#xA;"
         targetURL="configuration:/.settings/org.eclipse.ui.ide.prefs"
         encoding="UTF-8"/>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.core.net">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.core.net/org.eclipse.core.net.hasMigrated"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.core.net/proxiesEnabled"
+          value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.core.net/systemProxiesEnabled"
+          value="false">
+        <description></description>
+      </setupTask>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.epp.logging.aeri.ide">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.epp.logging.aeri.ide/anonymizeMessages"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.epp.logging.aeri.ide/anonymizeStackTraces"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.epp.logging.aeri.ide/sendMode"
+          value="NEVER">
+        <description></description>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.epp.logging.aeri.ide/debugEnabled"
+          value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.equinox.security">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/configuration/org.eclipse.equinox.security/org.eclipse.equinox.security.preferences.disabledProviders"
+          value="org.eclipse.equinox.security.ui.defaultpasswordprovider"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="User Preferences">
+    <setupTask
+        xsi:type="setup:ResourceCreationTask"
+        content="eclipse.preferences.version=1&#xA;themeEnabled=false&#xA;"
+        targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs"
+        encoding="UTF-8">
+      <description>Disables theming support</description>
+    </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
         name="de.loskutov.anyedit.AnyEditTools">
