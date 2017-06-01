@@ -284,6 +284,14 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.tm.terminal.view.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.tm.terminal.view.ui/terminals.localTerminalDefaultShellUnixArgs"
+          value="-l"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.ui">
       <setupTask
           xsi:type="setup:PreferenceTask"
