@@ -107,6 +107,11 @@
       name="Configuration Files">
     <setupTask
         xsi:type="setup:EclipseIniTask"
+        option="-Doomph.redirection.local.ide"
+        value="=index:/redirectable.projects.setup->${user.home|uri}/.eclipse/org.eclipse.oomph.setup/setups/local.ide.setup"
+        vm="true"/>
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
         option="-Duser.fname"
         value="=${user.fname}"
         vm="true"/>
@@ -392,7 +397,7 @@
     <description>Set an redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
   </stream>
   <logicalProjectContainer
-      xsi:type="setup:Project"
-      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='user.project']"/>
+      xsi:type="setup:ProjectCatalog"
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='local.ide']"/>
   <description>Provides provisioning environment for Eclipse with oomph </description>
 </setup:Project>
