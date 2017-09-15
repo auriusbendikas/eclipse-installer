@@ -83,12 +83,8 @@
         value="${installation.location/workspace}"/>
     <setupTask
         xsi:type="setup:VariableTask"
-        name="workspaces.location"
-        value="${user.home/workspaces}"/>
-    <setupTask
-        xsi:type="setup:VariableTask"
         name="git.workspace.location"
-        value="${workspaces.location/git}"/>
+        value="${user.home/git}"/>
     <setupTask
         xsi:type="setup:VariableTask"
         name="eclipse.target.platform"
@@ -379,7 +375,8 @@
       xsi:type="git:GitCloneTask"
       id="git.clone.oomph"
       location="${git.workspace.location/}${git.clone.oomph.remoteURI|gitRepository}"
-      remoteURI="https://github.com/auriusbendikas/eclipse-installer.git">
+      remoteURI="https://github.com/auriusbendikas/eclipse-installer.git"
+      pushURI="git@github.com:auriusbendikas/eclipse-installer.git">
     <description>${scope.project.label}</description>
   </setupTask>
   <setupTask
