@@ -285,6 +285,14 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.tm.terminal.control">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.tm.terminal.control/TerminalPrefBufferLines"
+          value="10000000"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.tm.terminal.view.ui">
       <setupTask
           xsi:type="setup:PreferenceTask"
