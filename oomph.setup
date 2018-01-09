@@ -85,11 +85,6 @@
         xsi:type="setup:VariableTask"
         name="git.workspace.location"
         value="${user.home/git}"/>
-    <setupTask
-        xsi:type="setup:VariableTask"
-        name="eclipse.target.platform"
-        value="Neon"
-        storageURI="scope://Workspace"/>
   </setupTask>
   <setupTask
       xsi:type="setup:ResourceCreationTask"
@@ -105,16 +100,6 @@
         xsi:type="setup:EclipseIniTask"
         option="-Doomph.redirection.local.ide"
         value="=index:/redirectable.projects.setup->${user.home|uri}/.eclipse/org.eclipse.oomph.setup/setups/local.ide.setup"
-        vm="true"/>
-    <setupTask
-        xsi:type="setup:EclipseIniTask"
-        option="-Duser.fname"
-        value="=${user.fname}"
-        vm="true"/>
-    <setupTask
-        xsi:type="setup:EclipseIniTask"
-        option="-Duser.email"
-        value="=${user.email}"
         vm="true"/>
     <setupTask
         xsi:type="setup:EclipseIniTask"
@@ -138,11 +123,11 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/configuration/org.eclipse.core.net/proxiesEnabled"
-          value="false"/>
+          value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/configuration/org.eclipse.core.net/systemProxiesEnabled"
-          value="false">
+          value="true">
         <description></description>
       </setupTask>
     </setupTask>
@@ -272,8 +257,16 @@
           value="true"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.oomph.setup.ui/p2.startup.tasks"
+          value="ALWAYS"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.oomph.setup.ui/preference.recorder.target"
           value="user:/user.setup#/"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.oomph.setup.ui/showProgressInWizard"
+          value="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
