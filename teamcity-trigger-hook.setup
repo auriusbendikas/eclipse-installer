@@ -165,7 +165,7 @@
       <requirement
           name="org.sf.feeling.decompiler.source.feature.group"/>
       <repository
-          url="http://raw.githubusercontent.com/cnfree/eclipse/master/decompiler/update"/>
+          url="https://ecd-plugin.github.io/update"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -406,6 +406,22 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.core.resources/description.autobuilding"
           value="false"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.resources/encoding"
+          value="UTF-8"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.core.runtime">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.runtime/content-types/org.eclipse.wst.html.core.htmlsource/file-extensions"
+          value="hbs"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.core.runtime/line.separator"
+          value="&#xA;"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -2413,6 +2429,9 @@
     <mapping
         filePattern="*.json"
         defaultEditorID="com.ibm.etools.webtools.json.ui.editor.JSONEditor"/>
+    <mapping
+        filePattern="*.hbs"
+        defaultEditorID="org.eclipse.wst.html.core.htmlsource.source"/>
     <mapping
         filePattern="*.htm"
         defaultEditorID="org.eclipse.wst.html.core.htmlsource.source"/>
