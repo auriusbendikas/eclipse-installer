@@ -104,13 +104,20 @@
     <setupTask
         xsi:type="setup:EclipseIniTask"
         option="-Xmx"
-        value="384m"
+        value="512m"
         vm="true">
       <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
     </setupTask>
     <setupTask
         xsi:type="setup:EclipseIniTask"
         option="-Dorg.eclipse.swt.internal.gtk.disablePrinting"
+        value=""
+        vm="true">
+      <description>Workaround to avoid XML Shema editor freezing in Linux</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        option="-Dswt.autoScale=exact"
         value=""
         vm="true">
       <description>Workaround to avoid XML Shema editor freezing in Linux</description>
@@ -269,6 +276,22 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
+        name="org.eclipse.jdt.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/content_assist_parameters_background"
+          value="255,255,225"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/sourceHoverBackgroundColor"
+          value="255,255,225"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.ui/sourceHoverBackgroundColor.SystemDefault"
+          value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
         name="org.eclipse.oomph.setup.ui">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -301,7 +324,11 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.tm.terminal.control/TerminalPrefBufferLines"
-          value="10000000"/>
+          value="50000"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.tm.terminal.control/TerminalPrefInvertColors"
+          value="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -360,8 +387,32 @@
         name="org.eclipse.ui.workbench">
       <setupTask
           xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/CONTENT_ASSIST_BACKGROUND_COLOR"
+          value="255,255,225"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.DeclarationView.backgroundColor"
+          value="255,255,225"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.ui.workbench/org.eclipse.ui.workbench.HOVER_BACKGROUND"
+          value="255,255,225"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.workbench/PLUGINS_NOT_ACTIVATED_ON_STARTUP"
           value="org.eclipse.epp.logging.aeri.ide;"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.wst.sse.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.wst.sse.ui/content_assist_parameters_background"
+          value="255,255,225"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.wst.sse.ui/content_assist_proposals_background"
+          value="255,255,225"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
