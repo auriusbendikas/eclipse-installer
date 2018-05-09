@@ -229,6 +229,7 @@
       name="Properties">
     <setupTask
         xsi:type="setup:VariableTask"
+        type="FOLDER"
         name="install.root"
         value="${user.home/software}"/>
     <setupTask
@@ -246,7 +247,7 @@
   </setupTask>
   <setupTask
       xsi:type="setup:ResourceCreationTask"
-      content="[Desktop Entry]&#xA;Categories=Application;Development;&#xA;Comment=${installation.id}&#xA;Encoding=UTF-8&#xA;Exec=env SWT_GTK3=0 GTK2_RC_FILES=&quot;/usr/share/themes/Lubuntu-default/gtk-2.0/gtkrc:.themes/eclipse-compact/gtk-2.0/gtkrc&quot; ${installation.location/eclipse/eclipse}&#xA;Icon=${installation.location/eclipse/icon.xpm}&#xA;Name=${installation.id}&#xA;Type=Application&#xA;"
+      content="[Desktop Entry]&#xA;Categories=Application;Development;&#xA;Comment=${installation.id}&#xA;Encoding=UTF-8&#xA;Exec=${installation.location/eclipse/eclipse}&#xA;Icon=${installation.location/eclipse/icon.xpm}&#xA;Name=${installation.id}&#xA;Type=Application&#xA;"
       targetURL="${user.home|uri}/.local/share/applications/${installation.id}.desktop"
       encoding="UTF-8">
     <description>Create start menu shortcut</description>
@@ -2574,5 +2575,5 @@
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='local.ide']"/>
-  <description>Provides development environment for inside</description>
+  <description>Provides development environment for Atlassian plugins</description>
 </setup:Project>
