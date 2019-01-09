@@ -466,6 +466,6 @@
   </stream>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
-      href="index:/org.eclipse.setup#//@projectCatalogs[name='local.ide']"/>
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='default.projects.catalog']"/>
   <description>Provides provisioning environment for Eclipse with oomph </description>
 </setup:Project>
