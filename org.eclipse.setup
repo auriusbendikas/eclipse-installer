@@ -217,7 +217,7 @@
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/de.loskutov.anyedit.AnyEditTools/org.eclipse.jdt.ui.editor.tab.width"
-            value="4"/>
+            value="2"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/de.loskutov.anyedit.AnyEditTools/replaceAllTabs"
@@ -484,16 +484,176 @@
           name="org.eclipse.jdt.ui">
         <setupTask
             xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.ui/content_assist_parameters_background"
-            value="255,255,225"/>
+            key="/instance/org.eclipse.jdt.ui/java_bracket"
+            value="248,248,242"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.ui/sourceHoverBackgroundColor"
-            value="255,255,225"/>
+            key="/instance/org.eclipse.jdt.ui/java_comment_task_tag"
+            value="116,112,93"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_comment_task_tag_bold"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_default"
+            value="248,248,242"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_doc_default"
+            value="116,112,93"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_doc_keyword"
+            value="231,219,116"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_doc_keyword_bold"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_doc_link"
+            value="102,216,239"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_doc_tag"
+            value="249,36,114"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_keyword"
+            value="249,36,114"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_keyword_bold"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_keyword_return"
+            value="249,36,114"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_operator"
+            value="249,36,114"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_multi_line_comment"
+            value="116,112,93"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_single_line_comment"
+            value="116,112,93"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/java_string"
+            value="231,219,116"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/matchingBracketsColor"
+            value="248,248,242"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.color"
+            value="231,219,116"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.class.color"
+            value="102,216,239"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.class.enabled"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.color"
+            value="100,100,100"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.color"
+            value="102,216,239"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.enabled"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.field.color"
+            value="253,149,33"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.color"
+            value="102,216,239"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.enabled"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.italic"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.enabled"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.method.color"
+            value="166,226,44"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.method.enabled"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.number.color"
+            value="172,128,255"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.number.enabled"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.color"
+            value="172,128,255"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.italic"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.bold"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.color"
+            value="172,128,255"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.color"
+            value="172,128,255"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.italic"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.color"
+            value="102,216,239"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.enabled"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.varKeyword.bold"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.ui/semanticHighlighting.varKeyword.color"
+            value="249,36,114"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/sourceHoverBackgroundColor.SystemDefault"
-            value="false"/>
+            value="true"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.ui/cleanup_profile"
@@ -888,8 +1048,36 @@
           name="org.eclipse.ui.editors">
         <setupTask
             xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/currentLineColor"
+            value="48,49,45"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.editors/lineNumberRuler"
             value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/occurrenceHighlighting"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/occurrenceIndication"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/occurrenceTextStyle"
+            value="BOX"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/searchResultHighlighting"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/searchResultIndication"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/searchResultTextStyle"
+            value="BOX"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.editors/showWhitespaceCharacters"
@@ -902,6 +1090,18 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.editors/tabWidth"
             value="2"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/writeOccurrenceHighlighting"
+            value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/writeOccurrenceIndication"
+            value="true"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.editors/writeOccurrenceTextStyle"
+            value="BOX"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -924,20 +1124,36 @@
           name="org.eclipse.ui.workbench">
         <setupTask
             xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.ui.workbench/CONTENT_ASSIST_BACKGROUND_COLOR"
-            value="255,255,225"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.DeclarationView.backgroundColor"
-            value="255,255,225"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.ui.workbench/org.eclipse.ui.workbench.HOVER_BACKGROUND"
-            value="255,255,225"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/PLUGINS_NOT_ACTIVATED_ON_STARTUP"
             value="org.eclipse.epp.logging.aeri.ide;org.eclipse.m2e.discovery;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.jface.bannerfont"
+            value="1|Ubuntu|11.0|1|GTK|1|;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.jface.headerfont"
+            value="1|Ubuntu|12.0|1|GTK|1|;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.jface.textfont"
+            value="1|DejaVu Sans Mono|10.0|0|GTK|1|;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.mylyn.tasks.ui.fonts.task.editor.comment"
+            value="1|DejaVu Sans|10.0|0|GTK|1|;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.mylyn.wikitext.tasks.ui.monospaceFont"
+            value="1|DejaVu Sans Mono|10.0|0|GTK|1|;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.mylyn.wikitext.ui.presentation.monospaceFont"
+            value="1|DejaVu Sans Mono|11.0|0|GTK|1|;"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/org.eclipse.ui.workbench.texteditor.blockSelectionModeFont"
+            value="1|DejaVu Sans Mono|10.0|0|GTK|1|;"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -2016,22 +2232,6 @@
           name="org.eclipse.wst.jsdt.ui">
         <setupTask
             xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.wst.jsdt.ui/content_assist_parameters_background"
-            value="255,255,225"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.wst.jsdt.ui/content_assist_proposals_background"
-            value="255,255,225"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.wst.jsdt.ui/sourceHoverBackgroundColor"
-            value="255,255,225"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.wst.jsdt.ui/sourceHoverBackgroundColor.SystemDefault"
-            value="false"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.wst.jsdt.ui/cleanup.add_default_serial_version_id"
             value="true"/>
         <setupTask
@@ -2314,6 +2514,50 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.wst.xml.core/lineWidth"
             value="200"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.eclipse.wst.xml.ui">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/cdataText"
+            value="#e7db74 | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/commentBorder"
+            value="#74705d | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/commentText"
+            value="#74705d | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/declBoder"
+            value="#f8f8f2 | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/entityReference"
+            value="#ac80ff | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/piBorder"
+            value="#f8f8f2 | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/tagAttributeName"
+            value="#a6e22c | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/tagAttributeValue"
+            value="#e7db74 | null | false | true | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/tagBorder"
+            value="#f8f8f2 | null | false | false | false | false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wst.xml.ui/tagName"
+            value="#f92472 | null | false | false | false | false"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
