@@ -107,10 +107,20 @@
     </setupTask>
     <setupTask
         xsi:type="setup:ResourceCreationTask"
-        content="[Desktop Entry]&#xA;Categories=Application;Development;&#xA;Comment=${installation.id}&#xA;Encoding=UTF-8&#xA;Exec=${installation.location/eclipse/eclipse}&#xA;Icon=${installation.location/eclipse/icon.xpm}&#xA;Name=${installation.id}&#xA;Type=Application&#xA;"
         targetURL="${user.home|uri}/.local/share/applications/${installation.id}.desktop"
         encoding="UTF-8">
       <description>Create start menu shortcut</description>
+      <content>
+        [Desktop Entry]
+        Categories=Application;Development;
+        Comment=${installation.id}
+        Encoding=UTF-8
+        Exec=${installation.location/eclipse/eclipse}
+        Icon=${installation.location/eclipse/icon.xpm}
+        Name=${installation.id}
+        Type=Application
+
+      </content>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -152,9 +162,18 @@
       </setupTask>
       <setupTask
           xsi:type="setup:ResourceCreationTask"
-          content="eclipse.preferences.version=1&#xA;MAX_RECENT_WORKSPACES=10&#xA;RECENT_WORKSPACES=${workspace.location}&#xA;RECENT_WORKSPACES_PROTOCOL=3&#xA;SHOW_RECENT_WORKSPACES=false&#xA;SHOW_WORKSPACE_SELECTION_DIALOG=false&#xA;"
           targetURL="configuration:/.settings/org.eclipse.ui.ide.prefs"
-          encoding="UTF-8"/>
+          encoding="UTF-8">
+        <content>
+          eclipse.preferences.version=1
+          MAX_RECENT_WORKSPACES=10
+          RECENT_WORKSPACES=${workspace.location}
+          RECENT_WORKSPACES_PROTOCOL=3
+          SHOW_RECENT_WORKSPACES=false
+          SHOW_WORKSPACE_SELECTION_DIALOG=false
+
+        </content>
+      </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
           name="org.eclipse.core.net">
@@ -209,17 +228,70 @@
         name="Preferences">
       <setupTask
           xsi:type="setup:ResourceCreationTask"
-          content="eclipse.preferences.version=1&#xA;themeEnabled=false&#xA;"
           targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs"
           encoding="UTF-8">
         <description>Disables theming support</description>
+        <content>
+          eclipse.preferences.version=1
+          themeEnabled=false
+
+        </content>
       </setupTask>
       <setupTask
           xsi:type="setup:ResourceCreationTask"
-          content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;lifecycleMappingMetadata>&#xA;  &lt;pluginExecutions>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>com.atlassian.plugin&lt;/groupId>&#xA;        &lt;artifactId>atlassian-spring-scanner-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>1.2.13&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>atlassian-spring-scanner&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>com.atlassian.maven.plugins&lt;/groupId>&#xA;        &lt;artifactId>bitbucket-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>6.2.11&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>filter-plugin-descriptor&lt;/goal>&#xA;          &lt;goal>generate-rest-docs&lt;/goal>&#xA;          &lt;goal>compress-resources&lt;/goal>&#xA;          &lt;goal>filter-test-plugin-descriptor&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;    &lt;pluginExecution>&#xA;      &lt;pluginExecutionFilter>&#xA;        &lt;groupId>org.assertj&lt;/groupId>&#xA;        &lt;artifactId>assertj-assertions-generator-maven-plugin&lt;/artifactId>&#xA;        &lt;versionRange>2.1.0&lt;/versionRange>&#xA;        &lt;goals>&#xA;          &lt;goal>generate-assertions&lt;/goal>&#xA;        &lt;/goals>&#xA;      &lt;/pluginExecutionFilter>&#xA;      &lt;action>&#xA;        &lt;ignore />&#xA;      &lt;/action>&#xA;    &lt;/pluginExecution>&#xA;  &lt;/pluginExecutions>&#xA;&lt;/lifecycleMappingMetadata>&#xA;"
           targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"
           encoding="UTF-8">
         <description>Disables theming support</description>
+        <content>
+          &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+          &lt;lifecycleMappingMetadata>
+            &lt;pluginExecutions>
+              &lt;pluginExecution>
+                &lt;pluginExecutionFilter>
+                  &lt;groupId>com.atlassian.plugin&lt;/groupId>
+                  &lt;artifactId>atlassian-spring-scanner-maven-plugin&lt;/artifactId>
+                  &lt;versionRange>1.2.13&lt;/versionRange>
+                  &lt;goals>
+                    &lt;goal>atlassian-spring-scanner&lt;/goal>
+                  &lt;/goals>
+                &lt;/pluginExecutionFilter>
+                &lt;action>
+                  &lt;ignore />
+                &lt;/action>
+              &lt;/pluginExecution>
+              &lt;pluginExecution>
+                &lt;pluginExecutionFilter>
+                  &lt;groupId>com.atlassian.maven.plugins&lt;/groupId>
+                  &lt;artifactId>bitbucket-maven-plugin&lt;/artifactId>
+                  &lt;versionRange>6.2.11&lt;/versionRange>
+                  &lt;goals>
+                    &lt;goal>filter-plugin-descriptor&lt;/goal>
+                    &lt;goal>generate-rest-docs&lt;/goal>
+                    &lt;goal>compress-resources&lt;/goal>
+                    &lt;goal>filter-test-plugin-descriptor&lt;/goal>
+                  &lt;/goals>
+                &lt;/pluginExecutionFilter>
+                &lt;action>
+                  &lt;ignore />
+                &lt;/action>
+              &lt;/pluginExecution>
+              &lt;pluginExecution>
+                &lt;pluginExecutionFilter>
+                  &lt;groupId>org.assertj&lt;/groupId>
+                  &lt;artifactId>assertj-assertions-generator-maven-plugin&lt;/artifactId>
+                  &lt;versionRange>2.1.0&lt;/versionRange>
+                  &lt;goals>
+                    &lt;goal>generate-assertions&lt;/goal>
+                  &lt;/goals>
+                &lt;/pluginExecutionFilter>
+                &lt;action>
+                  &lt;ignore />
+                &lt;/action>
+              &lt;/pluginExecution>
+            &lt;/pluginExecutions>
+          &lt;/lifecycleMappingMetadata>
+
+        </content>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -252,50 +324,6 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/de.loskutov.anyedit.AnyEditTools/saveAndFixLineDelimiters"
             value="true"/>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:CompoundTask"
-          name="org.dadacoalition.yedit">
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/boldConstantPreference"
-            value="false"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorAliasPreferences"
-            value="248,248,242"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorAnchorPreferences"
-            value="166,226,44"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorCommentPreference"
-            value="116,112,93"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorConstantPreferences"
-            value="172,128,255"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorDefaultPreference"
-            value="253,149,33"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorDocumentPreference"
-            value="248,248,242"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorKeyPreference"
-            value="249,36,114"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorScalarPreference"
-            value="231,219,116"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.dadacoalition.yedit/colorTagPropertyPreferences"
-            value="102,216,239"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -3316,14 +3344,6 @@
               name="org.eclipse.linuxtools.docker.feature.feature.group"/>
           <repository
               url="http://download.eclipse.org/linuxtools/update-oxygen-docker"/>
-        </setupTask>
-        <setupTask
-            xsi:type="setup.p2:P2Task"
-            label="YAML">
-          <requirement
-              name="org.dadacoalition.yedit.feature.feature.group"/>
-          <repository
-              url="http://dadacoalition.org/yedit"/>
         </setupTask>
       </setupTask>
       <setupTask
