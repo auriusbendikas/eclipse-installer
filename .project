@@ -6,7 +6,4 @@
 	</projects>
 	<buildSpec>
 	</buildSpec>
-	<natures>
-		<nature>oomph.setup.nature</nature>
-	</natures>
 </projectDescription>
