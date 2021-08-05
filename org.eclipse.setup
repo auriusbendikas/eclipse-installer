@@ -3098,7 +3098,7 @@
           <requirement
               name="org.eclipselabs.plugindependencies.feature.group"/>
           <repository
-              url="http://andrei.gmxhome.de/eclipse"/>
+              url="https://raw.githubusercontent.com/iloveeclipse/plugins/latest"/>
         </setupTask>
       </setupTask>
       <setupTask
