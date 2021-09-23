@@ -1568,6 +1568,10 @@
           name="org.sonarlint.eclipse.ui">
         <setupTask
             xsi:type="setup:PreferenceTask"
+            key="/instance/org.sonarlint.eclipse.ui/fileExclusions"
+            value="GLOB:node_modules/**/*&#xD;&#xA;GLOB:cdk.out/**/*"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
             key="/instance/org.sonarlint.eclipse.ui/markerSeverity"
             value="1"/>
       </setupTask>
