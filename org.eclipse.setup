@@ -452,6 +452,10 @@
             value="2147383647"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.consoleBackground"
+            value="24,25,21"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.max_history_size"
             value="20"/>
         <setupTask
@@ -462,6 +466,10 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.PREF_FILTER_LAUNCH_DELETED"
             value="false"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.outColor"
+            value="255,255,255"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
