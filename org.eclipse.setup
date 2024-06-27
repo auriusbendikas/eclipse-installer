@@ -10,7 +10,7 @@
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:workbench="http://www.eclipse.org/oomph/setup/workbench/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/workbench/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Workbench.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/workbench/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Workbench.ecore"
     name="Root">
   <discoverablePackage
       href="http://www.eclipse.org/oomph/base/1.0#/"/>
@@ -69,7 +69,7 @@
           xsi:type="setup.p2:P2Task"
           label="Common">
         <requirement
-            name="org.eclipse.mylyn.wikitext.editors_feature.feature.group"/>
+            name="org.eclipse.mylyn.wikitext.feature.feature.group"/>
         <requirement
             name="org.eclipse.tm.terminal.feature.feature.group"/>
       </setupTask>
@@ -491,6 +491,14 @@
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
+          name="org.eclipse.egit.ui">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.egit.ui/decorator_projecttext_decoration"
+            value="{dirty:>} {name} [{branch}{ branch_status}]"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
           name="org.eclipse.equinox.p2.ui.sdk.scheduler">
         <setupTask
             xsi:type="setup:PreferenceTask"
@@ -628,6 +636,14 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unhandledWarningToken"
             value="ignore"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="org.eclipse.jdt.debug.ui">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.jdt.debug.ui/org.eclipse.jdt.debug.ui.show_hex"
+            value="true"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -1263,7 +1279,15 @@
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.tm4e.ui/org.eclipse.tm4e.ui.themeAssociations"
-            value="[{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.dockerfile&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.dockerfile&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.css.scss&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.css.scss&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.json&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.json&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.js.jsx&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.js.jsx&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.tsx&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.tsx&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.xml&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.xml&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.xml.xsl&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.xml.xsl&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.ts&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.ts&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;text.html.basic&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;text.html.basic&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.yaml&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.yaml&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.css&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.css&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.css.less&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.css.less&quot;,&quot;whenDark&quot;:true},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.js&quot;,&quot;whenDark&quot;:false},{&quot;themeId&quot;:&quot;org.eclipse.tm4e.ui.themes.Monokai&quot;,&quot;scopeName&quot;:&quot;source.js&quot;,&quot;whenDark&quot;:true}]"/>
+            value="[]"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.tm4e.ui/org.eclipse.tm4e.ui.themes.defaultDarkTheme"
+            value="org.eclipse.tm4e.ui.themes.Monokai"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.tm4e.ui/org.eclipse.tm4e.ui.themes.defaultLightTheme"
+            value="org.eclipse.tm4e.ui.themes.Monokai"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -1555,6 +1579,14 @@
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
+          name="org.eclipse.wildwebdeveloper.xml">
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.wildwebdeveloper.xml/org.eclipse.wildwebdeveloper.xml.downloadExternalResources.enabled"
+            value="true"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
           name="org.sf.feeling.decompiler">
         <setupTask
             xsi:type="setup:PreferenceTask"
@@ -1632,6 +1664,12 @@
         command="org.eclipse.ui.edit.text.delete.line">
       <context
           id="org.eclipse.ui.textEditorScope"/>
+    </setupTask>
+    <setupTask
+        xsi:type="workbench:KeyBindingTask"
+        keys="CTRL+SHIFT+T"
+        command="org.eclipse.jdt.ui.navigate.open.type">
+      <context/>
     </setupTask>
     <project
         name="oomph"
@@ -1753,17 +1791,17 @@
           <requirement
               name="org.sf.feeling.decompiler.feature.group"/>
           <requirement
+              name="org.sf.feeling.decompiler.cfr.feature.group"/>
+          <requirement
+              name="org.sf.feeling.decompiler.fernflower.feature.group"
+              filter=""/>
+          <requirement
               name="org.sf.feeling.decompiler.jd.feature.group"
-              filter="(&amp;(|(osgi.arch=x86)(osgi.arch=x86_64))(|(osgi.os=linux)(osgi.os=macosx)(osgi.os=win32)))"/>
+              filter=""/>
           <requirement
               name="org.sf.feeling.decompiler.procyon.feature.group"/>
           <requirement
-              name="org.sf.feeling.decompiler.cfr.feature.group"/>
-          <requirement
-              name="org.sf.feeling.decompiler.jad.feature.group"
-              filter="(&amp;(|(osgi.arch=x86)(osgi.arch=x86_64))(|(osgi.os=linux)(osgi.os=macosx)(osgi.os=win32)))"/>
-          <requirement
-              name="org.sf.feeling.decompiler.source.feature.group"/>
+              name="org.sf.feeling.decompiler.vineflower.feature.group"/>
           <repository
               url="https://ecd-plugin.github.io/update"/>
         </setupTask>
