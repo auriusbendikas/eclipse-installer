@@ -156,6 +156,13 @@
       </setupTask>
       <setupTask
           xsi:type="setup:EclipseIniTask"
+          option="-Declipse.p2.force.threading=false"
+          value=""
+          vm="true">
+        <description>Number of active download threads</description>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:EclipseIniTask"
           option="-Dorg.eclipse.swt.internal.gtk.disablePrinting"
           value=""
           vm="true">
@@ -1478,6 +1485,10 @@
             value="248,248,242"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.ui.workbench/defaultEditorForContentType_org.eclipse.jdt.core.javaClass"
+            value="org.sf.feeling.decompiler.ClassFileEditor"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/org.eclipse.egit.ui.IgnoredResourceForegroundColor"
             value="116,112,93"/>
         <setupTask
@@ -1591,7 +1602,7 @@
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.sf.feeling.decompiler/org.sf.feeling.decompiler.type"
-            value="FernFlower"/>
+            value="Procyon"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.sf.feeling.decompiler/org.sf.feeling.decompiler.use_eclipse_formatter"
@@ -1633,30 +1644,6 @@
             key="/instance/tern.eclipse.ide.ui/indent-tabs-contentassist"
             value="false"/>
       </setupTask>
-    </setupTask>
-    <setupTask
-        xsi:type="workbench:FileAssociationsTask">
-      <mapping
-          filePattern="*.jsp"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
-      <mapping
-          filePattern="*.jsf"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
-      <mapping
-          filePattern="*.jspf"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
-      <mapping
-          filePattern="*.jspx"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
-      <mapping
-          filePattern="*.tag"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
-      <mapping
-          filePattern="*.tagf"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
-      <mapping
-          filePattern="*.tagx"
-          defaultEditorID="org.eclipse.jst.jsp.core.jspsource.source"/>
     </setupTask>
     <setupTask
         xsi:type="workbench:KeyBindingTask"
@@ -1825,10 +1812,6 @@
       <setupTask
           xsi:type="setup:CompoundTask"
           name="Configuration Files">
-        <setupTask
-            xsi:type="setup:EclipseIniTask"
-            option="-perspective"
-            value="org.eclipse.jst.j2ee.J2EEPerspective"/>
         <setupTask
             xsi:type="setup:EclipseIniTask"
             option="-Xms"
