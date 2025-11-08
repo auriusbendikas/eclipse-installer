@@ -1494,15 +1494,15 @@
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/org.eclipse.jface.bannerfont"
-            value="1|Ubuntu|10.0|1|GTK|1|;"/>
+            value="1|Ubuntu Nerd Font Propo|10.0|1|GTK|1|;"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/org.eclipse.jface.headerfont"
-            value="1|Ubuntu|11.0|1|GTK|1|;"/>
+            value="1|Ubuntu Nerd Font Propo|11.0|1|GTK|1|;"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/org.eclipse.jface.textfont"
-            value="1|DejaVu Sans Mono|9.0|0|GTK|1|;"/>
+            value="1|DejaVuSansM Nerd Font Mono|9.0|0|GTK|1|;"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/org.eclipse.linuxtools.docker.editor.color.comment"
@@ -1522,7 +1522,7 @@
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.ui.workbench/org.eclipse.ui.workbench.texteditor.blockSelectionModeFont"
-            value="1|DejaVu Sans Mono|9.0|0|GTK|1|;"/>
+            value="1|DejaVuSansM Nerd Font Mono|9.0|0|GTK|1|;"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
