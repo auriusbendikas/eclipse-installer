@@ -176,6 +176,13 @@
         <description>Workaround to avoid XML Shema editor freezing in Linux</description>
       </setupTask>
       <setupTask
+          xsi:type="setup:EclipseIniTask"
+          option="-Declipse.p2.mirrors=false"
+          value=""
+          vm="true">
+        <description>Disable usage of mirrors to speed up updates</description>
+      </setupTask>
+      <setupTask
           xsi:type="setup:ResourceCreationTask"
           targetURL="configuration:/.settings/org.eclipse.ui.ide.prefs"
           encoding="UTF-8">
