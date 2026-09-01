@@ -17,39 +17,39 @@
   <discoverablePackage
       href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/JDT.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Launching.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Maven.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Maven.ecore#/"/>
   <discoverablePackage
       href="http://www.eclipse.org/oomph/p2/1.0#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/PDE.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/PDE.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Predicates.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Projects.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/ProjectSet.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/ProjectSet.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Resources.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Resources.ecore#/"/>
   <discoverablePackage
       href="http://www.eclipse.org/oomph/setup/1.0#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupTarglets.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/SetupWorkingSets.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Targlets.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Targlets.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Workbench.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Workbench.ecore#/"/>
   <discoverablePackage
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/WorkingSets.ecore#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/WorkingSets.ecore#/"/>
   <productCatalog
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.products.setup#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/org.eclipse.products.setup#/"/>
   <projectCatalog
       name="root.projects"
       label="Root Projects">
@@ -1157,6 +1157,10 @@
             value="apache-maven"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.m2e.core/eclipse.m2.problem.notCoveredMojoExecution"
+            value="ignore"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.m2e.core/eclipse.m2.runtimes"
             value="apache-maven"/>
         <setupTask
@@ -1167,6 +1171,10 @@
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.m2e.core/eclipse.m2.runtimesNodes/apache-maven/type"
             value="EXTERNAL"/>
+        <setupTask
+            xsi:type="setup:PreferenceTask"
+            key="/instance/org.eclipse.m2e.core/eclipse.m2.unkownMojoExecutionAction"
+            value="ignore"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -1900,5 +1908,5 @@
     <description>Root IDE projects</description>
   </projectCatalog>
   <projectCatalog
-      href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/redirectable.projects.setup#/"/>
+      href="https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/redirectable.projects.setup#/"/>
 </setup:Index>
