@@ -70,6 +70,8 @@
           label="Common">
         <requirement
             name="org.eclipse.mylyn.wikitext.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.terminal.feature.feature.group"/>
       </setupTask>
       <setupTask
           xsi:type="setup.p2:P2Task"
@@ -1808,6 +1810,14 @@
               name="org.projectlombok.feature.feature.group"/>
           <repository
               url="https://projectlombok.org/p2"/>
+        </setupTask>
+        <setupTask
+            xsi:type="setup.p2:P2Task"
+            label="Copilot">
+          <requirement
+              name="com.microsoft.copilot.eclipse.feature.feature.group"/>
+          <repository
+              url="https://azuredownloads-g3ahgwb5b8bkbxhd.b01.azurefd.net/github-copilot"/>
         </setupTask>
       </setupTask>
       <setupTask
